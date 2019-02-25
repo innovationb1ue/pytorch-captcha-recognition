@@ -6,8 +6,8 @@ import my_dataset
 from captcha_cnn_model import CNN
 
 # Hyper Parameters
-num_epochs = 30
-batch_size = 100
+num_epochs = 50
+batch_size = 20
 learning_rate = 0.001
 
 def main():
@@ -41,5 +41,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-

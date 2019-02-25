@@ -10,9 +10,9 @@ ALL_CHAR_SET_LEN = len(ALL_CHAR_SET)
 MAX_CAPTCHA = 4
 
 # 图像大小
-IMAGE_HEIGHT = 60
-IMAGE_WIDTH = 160
+IMAGE_HEIGHT = 34
+IMAGE_WIDTH = 110
 
-TRAIN_DATASET_PATH = 'dataset' + os.path.sep + 'train'
-TEST_DATASET_PATH = 'dataset' + os.path.sep + 'test'
-PREDICT_DATASET_PATH = 'dataset' + os.path.sep + 'predict'
+TRAIN_DATASET_PATH =  'dataset1' + os.path.sep + 'asd'
+TEST_DATASET_PATH = 'dataset1' + os.path.sep + 'test'
+PREDICT_DATASET_PATH = 'dataset1' + os.path.sep + 'newfolder'

@@ -26,11 +26,9 @@ def main():
         c2 = captcha_setting.ALL_CHAR_SET[np.argmax(predict_label[0, 2 * captcha_setting.ALL_CHAR_SET_LEN:3 * captcha_setting.ALL_CHAR_SET_LEN].data.numpy())]
         c3 = captcha_setting.ALL_CHAR_SET[np.argmax(predict_label[0, 3 * captcha_setting.ALL_CHAR_SET_LEN:4 * captcha_setting.ALL_CHAR_SET_LEN].data.numpy())]
 
-        c = '%s%s%s%s' % (c0, c1, c2, c3)
+        c = '%s%s%s%s' % (c0,c1,c2,c3)
         print(c)
         #vis.images(image, opts=dict(caption=c))
 
 if __name__ == '__main__':
     main()
-
-
