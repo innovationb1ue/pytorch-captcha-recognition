@@ -3,6 +3,8 @@ import numpy as np
 import captcha_setting
 
 
+
+# one hot for Digit-lowercase-Uppercase-'_'   total 62
 def encode(text):
     vector = np.zeros(captcha_setting.ALL_CHAR_SET_LEN * captcha_setting.MAX_CAPTCHA, dtype=float)
     def char2pos(c):
@@ -10,12 +12,15 @@ def encode(text):
             k = 62
             return k
         k = ord(c)-48
+        # if k is not number
         if k > 9:
             k = ord(c) - 65 + 10
+            # if k is not lowercase
             if k > 35:
                 k = ord(c) - 97 + 26 + 10
+                # if k is not Uppercase
                 if k > 61:
-                    raise ValueError('error')
+                    raise ValueError('one hot encode error')
         return k
     for i, c in enumerate(text):
         idx = i * captcha_setting.ALL_CHAR_SET_LEN + char2pos(c)
